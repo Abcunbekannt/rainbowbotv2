@@ -1,4 +1,5 @@
 import asyncio
+import BOT_TOKEN from secret.txt
 import random
 import discord
 from discord import Member, Guild
@@ -74,4 +75,4 @@ async def on_message(message):
             await asyncio.sleep(2)
             await mess.edit(content='Deine Antwort zur Frage `{0}` lautet: `{1}`'
                             .format(frage, random.choice(antworten)))
-client.run('NjgyMjgzMDU0NTM4MTYyNDg5.XlavoQ.QnMtJAjtQ8wkIXdA-Kj4JMcNyhY')
+client.run('BOT_TOKEN')
