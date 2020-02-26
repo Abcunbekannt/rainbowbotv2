@@ -74,4 +74,4 @@ async def on_message(message):
             await asyncio.sleep(2)
             await mess.edit(content='Deine Antwort zur Frage `{0}` lautet: `{1}`'
                             .format(frage, random.choice(antworten)))
-client.run('BOT_TOKEN')
+client.run(os.getenv('Token'))
