@@ -2,7 +2,7 @@ import asyncio
 import random
 import os
 import discord
-from discord import Member, Guild
+from discord import Member
 import Member
 import Guild
 client = discord.Client()
