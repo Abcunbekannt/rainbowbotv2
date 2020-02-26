@@ -1,8 +1,10 @@
 import asyncio
 import random
 import os
+import message
+from message import channel
 import discord
-from discord import Member, Channel
+from discord import Member
 client = discord.Client()
 #########################################################################
 antworten =['Ja', 'Nein', 'Vielleicht', 'Wahrscheinlich', 'Sieht so aus', 'Sehr wahrscheinlich',
