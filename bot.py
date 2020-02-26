@@ -1,5 +1,4 @@
 import asyncio
-import BOT_TOKEN from secret.txt
 import random
 import discord
 from discord import Member, Guild
