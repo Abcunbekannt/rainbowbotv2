@@ -1,0 +1,12 @@
+{
+  "name": "26.2TestHeroku24-7",
+  "description": "Test",
+  "version": "0.0.0",
+  "main": "bot.py",
+  "scripts": {
+    "start": "node bot.py"
+  },
+  "dependencies": {
+    "discord.js": "11.1.0",
+  }
+}
