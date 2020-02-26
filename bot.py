@@ -2,6 +2,7 @@ import asyncio
 import random
 import os
 import discord
+import channel
 from discord import Member
 client = discord.Client()
 #########################################################################
