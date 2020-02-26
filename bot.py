@@ -3,6 +3,8 @@ import random
 import os
 import discord
 from discord import Member, Guild
+import Member
+import Guild
 client = discord.Client()
 #########################################################################
 antworten =['Ja', 'Nein', 'Vielleicht', 'Wahrscheinlich', 'Sieht so aus', 'Sehr wahrscheinlich',
