@@ -2,8 +2,8 @@ import asyncio
 import random
 import os
 import discord
-from discord import Member
-import Guild
+from discord import Member, guild
+import guild
 client = discord.Client()
 #########################################################################
 antworten =['Ja', 'Nein', 'Vielleicht', 'Wahrscheinlich', 'Sieht so aus', 'Sehr wahrscheinlich',
