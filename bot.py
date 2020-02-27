@@ -23,8 +23,8 @@ async def status_task():
     while True:
         await client.change_presence(activity=discord.Game('Ersteller Canned Heat'), status=discord.Status.online)
         await asyncio.sleep(5)
-        await client.change_presence(activity=discord.Game('Mein cooler Bot!'), status=discord.Status.online)
-        await asyncio.sleep(5)
+        #await client.change_presence(activity=discord.Game('Mein cooler Bot!'), status=discord.Status.online)
+        #await asyncio.sleep(5)
         await client.change_presence(activity=discord.Game('rainbow!help für Hilfe'), status=discord.Status.online)
         await asyncio.sleep(5)
         if client.get_guild(640618905030754338):
