@@ -71,21 +71,30 @@ async def on_message(message):
         if message.author.permissions_in(message.channel).manage_messages:
             args = message.content.split(' ')
             if len(args) == 2:
-                await message.author.send('{} Deine Nachricht: {} wurde angepinnt'.format(member.mention, args[1]))
-                await message.channel.send ('{}'.format(args [1]))
-            if args[1] == message.content:
+                Pin = str(args[1])
+                Autor = message.author
+                autormention = Autor.mention
+                await message.author.send('{} Deine Nachricht: {} wurde angepinnt'.format(autormention, args[1]))
+                message = await message.channel.send ('{}'.format(args [1]))
                 await message.pin()
         if not message.author.permissions_in(message.channel).manage_messages:
-            await message.channel.send ('{} Dir fehlen leider die Berechtigungen, um diesen Befehl auszuführen!'.format(member.mention))
+            autormention = Autor.mention
+            await message.channel.send ('{} Dir fehlen leider die Berechtigungen, um diesen Befehl auszuführen!'.format(autormention))
+        if not len(args) == 2:
+            aa = message.author.mention
+            await message.channel.send('{} Fehler! Du hast keine Nachricht angegeben'.format(aa))
     if message.content.startswith('rainbow!temppin'):
         args = message.content.split(' ')
         if len(args) == 2:
-            await message.author.send('{} Deine Nachricht: {} wird für 5 Sekunden angepinnt'.format(member.mention, args[1]))
-            await message.channel.send ('{}'.format(args [1]))
-            if args[1] == message.content:
-                await message.pin()
-                time.sleep(5)
-                await message.unpin()
+            aa = message.author.mention
+            await message.author.send('{} Deine Nachricht: {} wird für 10 Sekunden angepinnt'.format(aa, args[1]))
+            message = await message.channel.send('{}'.format(args[1]))
+            await message.pin()
+            time.sleep(10)
+            await message.unpin()
+        if not len(args) == 2:
+            aa = message.author.mention
+            await message.channel.send('{} Fehler! Du hast keine Nachricht angegeben'.format(aa))
     if message.content.startswith('rainbow!userinfo'):
         args = message.content.split(' ')
         if len(args) == 2:
@@ -109,7 +118,7 @@ async def on_message(message):
                 mess = await message.channel.send(embed=embed)
                 await mess.add_reaction(
                     '<img draggable="false" role="img" class="emoji" alt="🚍" src="https://s.w.org/images/core/emoji/12.0.0-1/svg/1f68d.svg">')
-                await mess.add_reaction('a:tut_herz:662606955520458754')
+                await mess.add_reaction('a:hearts: 662606955520458754')
     if message.content.startswith('rainbow!clear'):
         if message.author.permissions_in(message.channel).manage_messages:
             args = message.content.split(' ')
@@ -140,5 +149,5 @@ async def on_message_edit (self, before, after):
     await channel.send("Geänderte Nachricht " + before.content + " zu " + after.content)
 
 #später für heroku client.run(viel azhelen) rausnehmen komplett und den Token in secrets bei heroku eingeben. Davor noch das # vor client.run(os.getenv('Token')) wegmachen
-client.run(os.getenv('Token'))
-
+#client.run(os.getenv('Token'))
+client.run('NjgyNjI5MjU5MjI2Nzc1Njcz.XlgQww.Y7r2s1STFRk0LqzOJhKM7sTNcQU')
