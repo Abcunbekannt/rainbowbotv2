@@ -140,5 +140,5 @@ async def on_message_edit (self, before, after):
     await channel.send("Geänderte Nachricht " + before.content + " zu " + after.content)
 
 #später für heroku client.run(viel azhelen) rausnehmen komplett und den Token in secrets bei heroku eingeben. Davor noch das # vor client.run(os.getenv('Token')) wegmachen
-#client.run(os.getenv('Token'))
-client.run('NjgyNjI5MjU5MjI2Nzc1Njcz.XlfyDg.FtDLMGEu0ARnRlfOr-dKhpS9Uig')
+client.run(os.getenv('Token'))
+
