@@ -33,7 +33,13 @@ async def on_message(message):
         return
     if 't!help' in message.content:
         await message.channel.send('**Hilfe zum PyBot**\r\n'
-                                   't!help - Zeigt diese Hilfe an')
+                                   't!help - Zeigt diese Hilfe an\r\n'
+                                   't!userinfo + Name des gewünschten Users - Zeigt Infos zu dem User an\r\n'
+                                   't!8ball + Frage - Der Bot antwortet zufällig auf deine Frage\r\n'
+                                   't!clear + Anzahl der Nachrichten, die gelöscht werden sollen - Löscht die angegebene Anzahl von Nachrichten\r\n'
+                                  
+                                  
+                                  )
     if message.content.startswith('t!userinfo'):
         args = message.content.split(' ')
         if len(args) == 2:
